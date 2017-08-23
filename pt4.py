@@ -16,8 +16,9 @@
 ===> 120
 '''
 
+
 def fact(n):
-    if n==1:
+    if n == 1:
         return 1
     return n * fact(n - 1)
 
@@ -36,25 +37,31 @@ print(fact(100))
 ===> 120
 
 '''
+
+
 def fact(n):
     return fact_iter(n, 1)
+
 
 def fact_iter(num, product):
     if num == 1:
         return product
     return fact_iter(num - 1, num * product)
 
+
 print(fact(10))
+
 
 def move(n, a, b, c):
     if(n == 1):
-        print(a,"->",c)
+        print(a, "->", c)
         return
-    move(n-1, a, c, b)
+    move(n - 1, a, c, b)
     move(1, a, b, c)
-    move(n-1, b, a, c)
+    move(n - 1, b, a, c)
 
-print(3,0,0)
+
+print(3, 0, 0)
 move(3, "a", "b", "c")
 '''
 print(5,0,0)
